@@ -23,7 +23,18 @@ def directors_totals(nds)
   row_index = 0 
   while row_index< directors_database.length do
     column_index = 0 
-    while column_index <directors_database[row_index].lenght do
+    while column_index <directors_database[row_index][:movies].lenght do
+     
+      inner=directors_database[row_index][column_index].lenght
+      inner_index = 0 
+      while inner_index < inner do
+        grand_total+= directors_database[row_index][column_index][inner_index][:worldwide_gross]
+        inner_index +=1 
+      end
+      column_index+=1 
+    end
+    row_index+=1 
       
   nil
 end
+p grand_total
