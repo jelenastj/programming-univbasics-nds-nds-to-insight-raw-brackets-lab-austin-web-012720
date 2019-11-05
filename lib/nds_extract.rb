@@ -28,7 +28,7 @@ def directors_totals(nds)
       inner=nds[index][column_index].count
       inner_index = 0 
       while inner_index < inner do
-        grand_total+= nds[index][column_index][inner_index][:worldwide_gross]
+        result+= nds[index][column_index][inner_index][:worldwide_gross]
         inner_index +=1 
       end
       column_index+=1 
@@ -36,4 +36,4 @@ def directors_totals(nds)
     index+=1 
     end
     
-p grand_total
+p result
