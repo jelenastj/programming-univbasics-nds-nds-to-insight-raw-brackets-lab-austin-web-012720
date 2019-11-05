@@ -28,12 +28,10 @@ def directors_totals(nds)
     
     while movie_number <nds[index][:movies].length do
      
-        sum+= nds[index][column_index][inner_index][:worldwide_gross]
-        inner_index +=1 
+        sum+= nds[index][:movies][movie_number][:worldwide_gross]
+        movie_number +=1 
       end
-      column_index +=1 
-    end
-    index +=1 
+ 
     nil 
     p result
     end
