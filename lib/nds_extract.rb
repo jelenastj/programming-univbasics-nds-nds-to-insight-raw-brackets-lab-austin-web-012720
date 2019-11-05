@@ -20,20 +20,20 @@ def directors_totals(nds)
   # Be sure to return the result at the end!
   
  
-  row_index = 0 
-  while row_index< directors_database.length do
+  index = 0 
+  while index< directors_database.count do
     column_index = 0 
-    while column_index <directors_database[row_index][:movies].length do
+    while column_index <directors_database[index][:movies].count do
      
-      inner=directors_database[row_index][column_index].length
+      inner=directors_database[index][column_index].count
       inner_index = 0 
       while inner_index < inner do
-        grand_total+= directors_database[row_index][column_index][inner_index][:worldwide_gross]
+        grand_total+= directors_database[index][column_index][inner_index][:worldwide_gross]
         inner_index +=1 
       end
       column_index+=1 
     end
-    row_index+=1 
+    index+=1 
     end
     
 p grand_total
