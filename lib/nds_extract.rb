@@ -21,19 +21,19 @@ def directors_totals(nds)
   
  
   index = 0 
-  while index< nds.count do
+  while index< nds.length do
     column_index = 0 
-    while column_index <nds[index][:movies].count do
+    while column_index <nds[index][:movies].length do
      
-      inner=nds[index][column_index].count
+      inner=nds[index][column_index].length
       inner_index = 0 
       while inner_index < inner do
         result+= nds[index][column_index][inner_index][:worldwide_gross]
         inner_index +=1 
       end
-      column_index+=1 
+      column_index +=1 
     end
-    index+=1 
+    index +=1 
     end
     nil
 p result
