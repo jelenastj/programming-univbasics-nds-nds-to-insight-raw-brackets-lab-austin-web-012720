@@ -21,9 +21,9 @@ def directors_totals(nds)
   
  
   index = 0 
-  while index< directors_database.count do
+  while index< nds.count do
     column_index = 0 
-    while column_index <directors_database[index][:movies].count do
+    while column_index <nds[index][:movies].count do
      
       inner=directors_database[index][column_index].count
       inner_index = 0 
