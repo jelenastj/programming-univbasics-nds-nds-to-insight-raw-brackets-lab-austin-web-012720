@@ -30,7 +30,7 @@ def directors_totals(nds)
       inner=nds[index][column_index].length
       
       while inner_index < inner do
-        result+= nds[index][column_index][inner_index][:worldwide_gross]
+        sum+= nds[index][column_index][inner_index][:worldwide_gross]
         inner_index +=1 
       end
       column_index +=1 
